@@ -1,13 +1,17 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+/* Appeler fichiers dans l'ordre de déclaration des fichiers ITCSS*/
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+/* Settings */
+@import url("./styles/1-settings/variables.css");
+
+/* Tools */
+
+/* Generic */
+@import url("./styles/3-generic/reset.css");
+
+/* Elements */
+
+/* Objects */
+
+/* Components */
+
+/* Utilities */
