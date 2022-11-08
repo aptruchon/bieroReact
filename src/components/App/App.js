@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import BoutonNav from '../BoutonNav/BoutonNav';
 import Compteur from '../Compteur/Compteur';
 import Entete from '../Entete/Entete';
@@ -25,10 +26,15 @@ export default class App extends React.Component{
   // <Compteur valeurInitiale="0"/>
   render() {
     return (
-      <>
+      <Router>
         <Entete titre="Biero" test="valeur"/>
-        <Compteur handleIncrement={this.incremente} valeur={this.state.valeur}/>
-			</>
+        <Routes>
+
+          <Route path='/' element={<Accueil />} />
+          <Route path='/compteur' element={<Compteur handleIncrement={this.incremente} valeur={this.state.valeur}/>} />
+
+        </Routes>
+			</Router>
 		);
 	}
 }
