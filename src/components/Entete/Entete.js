@@ -1,6 +1,6 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './Entete.css';
-import BoutonNav from '../BoutonNav/BoutonNav';
 
 export default class Entete extends React.Component{
   constructor(props){
@@ -17,11 +17,11 @@ export default class Entete extends React.Component{
     return (
       <header>
         <h1>{this.state.titre}</h1>
-        <ul>
-          <li><BoutonNav lien="#1" label="Item 1" /></li>
-          <li><BoutonNav lien="#2" label="Item 2" /></li>
-          <li><BoutonNav lien="#3" label="Item 3" /></li>
-        </ul>
+        <nav>
+          <NavLink to="/">Accueil</NavLink>
+          <NavLink to="/compteur">Compteur</NavLink>
+          <NavLink to="/liste">Liste des bières</NavLink>
+        </nav>
       </header>
     );
   }

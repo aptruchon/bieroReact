@@ -1,9 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import BoutonNav from '../BoutonNav/BoutonNav';
-import Compteur from '../Compteur/Compteur';
 import Entete from '../Entete/Entete';
+import Accueil from '../Accueil/Accueil';
+import Compteur from '../Compteur/Compteur';
+import ListeBiere from '../ListeBiere/ListeBiere';
+import DetailBiere from '../DetailBiere/DetailBiere';
 import './App.css';
+import Biere from '../Biere/Biere';
 
 export default class App extends React.Component{
   constructor(props){
@@ -25,13 +28,16 @@ export default class App extends React.Component{
 
   // <Compteur valeurInitiale="0"/>
   render() {
+    // <Route path='/compteur' element={<Compteur handleIncrement={this.incremente} valeur={this.state.valeur} />} />
     return (
       <Router>
         <Entete titre="Biero" test="valeur"/>
         <Routes>
 
           <Route path='/' element={<Accueil />} />
-          <Route path='/compteur' element={<Compteur handleIncrement={this.incremente} valeur={this.state.valeur}/>} />
+          <Route path='/liste' element={<ListeBiere/>} />
+          <Route path='/Biere/:id' element={<DetailBiere/>} />
+          <Route path='*' element={<Accueil/>} />
 
         </Routes>
 			</Router>
