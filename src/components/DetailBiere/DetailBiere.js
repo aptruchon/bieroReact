@@ -8,10 +8,16 @@ export default class DetailBiere extends React.Component{
            <>
                 <article>
                     <div className='details'>
-                        <h2>DetailBiere</h2>
-
+                        <h2>Nom de la bière</h2>
+                        <h3>Brasserie</h3>
+                        <span>Description</span>
+                        <span>Note</span>
+                        <div>
+                            <h4>Commentaires</h4>
+                            <span></span>
+                        </div>
                     </div>
-                    <div className='detail'>
+                    <div className='image'>
                         <img src="" alt="" />
                     </div>
                 </article>
