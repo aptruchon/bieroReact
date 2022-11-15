@@ -11,7 +11,6 @@ export default class ListeBiere extends React.Component{
         this.state = {
             bieres: []
         }
-
     }
 
     componentDidMount() {

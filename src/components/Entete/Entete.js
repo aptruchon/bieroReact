@@ -19,7 +19,6 @@ export default class Entete extends React.Component{
         <h1>{this.state.titre}</h1>
         <nav>
           <NavLink to="/">Accueil</NavLink>
-          <NavLink to="/compteur">Compteur</NavLink>
           <NavLink to="/liste">Liste des bières</NavLink>
         </nav>
       </header>
