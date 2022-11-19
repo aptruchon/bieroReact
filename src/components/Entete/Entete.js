@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Entete.css';
-import logo from './bieroLogo.svg'
+import logo from './bieroLogo.svg';
 
 export default class Entete extends React.Component{
   constructor(props){
@@ -25,15 +25,14 @@ export default class Entete extends React.Component{
   render() {
     return (
       <header>
-        <nav>
           <NavLink to="/">{<img src={logo} alt="Logo" />}</NavLink>
-          <br/>
-          <NavLink to="/liste">Liste des bières</NavLink>
+        <nav>
+          <NavLink to="/liste"><span className='lienListe'>Liste des bières</span></NavLink>
+          <form>
+              <input onBlur={this.changeCourriel} type="text" placeholder="Nom d'usager" />
+              <button onClick={this.login}>Se connecter</button>
+          </form>
         </nav>
-        <form>
-            <input onBlur={this.changeCourriel} type="text" placeholder='Usager' />
-            <button onClick={this.login}>Login</button>
-        </form>
       </header>
     );
   }

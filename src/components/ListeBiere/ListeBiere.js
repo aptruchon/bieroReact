@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Biere from '../Biere/Biere';
 import './ListeBiere.css';
 
+
 export default class ListeBiere extends React.Component{
 
     constructor(props) {
@@ -37,7 +38,7 @@ export default class ListeBiere extends React.Component{
 
         return (
            <>
-                <div>
+                <div className='grille'>
                     {bieres}
                 </div>
            </>
