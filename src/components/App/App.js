@@ -42,11 +42,11 @@ export default class App extends React.Component{
 }
 
 /* 
-- Mise en page de l'entête avec un logo SVG
-- Mise en page de l'accueil avec du contenu statique
-- Mise en page de la grille de la liste des bières
-- Mise en page de la tuile tuile biere (image, nom et brasserie) et gestion de l'image par défault 
-- Mise en oage de detailBiere (image, nom brasserie, description, commentaire) et gestion de l'image par défault
+- Mise en page de l'entête avec un logo SVG OK
+- Mise en page de l'accueil avec du contenu statique SEMI-OK
+- Mise en page de la grille de la liste des bières SEMI-OK
+- Mise en page de la tuile tuile biere (image, nom et brasserie) et gestion de l'image par défault OK
+- Mise en page de detailBiere (image, nom brasserie, description, commentaires) et gestion de l'image par défault
   + gestion dynamique de la note actuelle
   + mise en page ajout commentaire
   + Nouveau bloc ajout Note + sa mise en page

@@ -11,17 +11,18 @@ export default class Biere extends React.Component{
             brasserie: props.data.brasserie,
             img: props.data.image || {imageBiere}.imageBiere
         }
-        
     }
 
     render() {
-        console.log(this.state);
-        
         return (
-            <article>
-                <img src={this.state.img} alt="" />
-                <h2>{this.state.nom}</h2>
-                <span>{this.state.brasserie}</span>
+            <article className='tuile'>
+                <div>
+                    <img className='imgTuile' src={this.state.img} alt="" />
+                </div>
+                <div className='tuile-info'>
+                    <h2 className='nomBiere'>{this.state.nom}</h2>
+                    <span>{this.state.brasserie}</span>
+                </div>
             </article>
         );
     }

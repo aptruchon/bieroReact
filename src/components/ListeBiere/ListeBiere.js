@@ -38,6 +38,7 @@ export default class ListeBiere extends React.Component{
 
         return (
            <>
+                <h2 className='titreListe'>Nos bières</h2>
                 <div className='grille'>
                     {bieres}
                 </div>
