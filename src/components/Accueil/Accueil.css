@@ -1,23 +1,30 @@
-.articleInfo {
+.articleAccueil {
     display: flex;
+    text-align: center;
+    flex-direction: column;
     justify-content: center;
-    margin-top: 25px;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Poiret One', cursive;
+    margin-bottom: 40px;
 }
 
-h1 {
-    margin-top: 0px;
+.articleAccueil__titre {
     font-size: 40px;
-    font-weight: 200;
-    
+    /* font-weight: lighter; */
 }
 
-p {
-    max-width: 50%;
-    padding-right: 15px;
-    margin: 0px 0px 0px 15px;
+.articleAccueil__lien-listeBiere {
+    font-size: 25px;
 }
 
-imgAccueil {
-    border-radius: 10px;
+.articleAccueil__texte {
+    font-size: 20px;
+    margin: 0px 20px;
+}
+
+.articleAccueil__img {
+    height: 50vh;
+    object-fit: cover;
+    position: relative;
+
+
 }

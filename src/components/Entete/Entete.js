@@ -25,12 +25,11 @@ export default class Entete extends React.Component{
   render() {
     return (
       <header>
-          <NavLink to="/">{<img src={logo} alt="Logo" />}</NavLink>
-        <nav>
-          <NavLink to="/liste"><span className='lienListe'>Liste des bières</span></NavLink>
-          <form>
-              <input onBlur={this.changeCourriel} type="text" placeholder="Nom d'usager" />
-              <button onClick={this.login}>Se connecter</button>
+        <nav className='navigation'>
+          <NavLink to="/"><img className='navigation__logo' src={logo} alt="Logo" /></NavLink>
+          <form className='navigation__formulaire'>
+              <input className='navigation__formulaire-input' onBlur={this.changeCourriel} type="text" placeholder="Nom d'usager" />
+              <button className='navigation__formulaire-bouton' onClick={this.login}>Se connecter</button>
           </form>
         </nav>
       </header>

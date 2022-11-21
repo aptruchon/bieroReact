@@ -1,12 +1,13 @@
 .tuile {
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    /* padding: 10px; */
     margin-top: 2vw;
     font-family: 'Raleway', sans-serif;
     font-weight: 200;
-    background-color: white;
-    box-shadow: 2px 2px rgba(0, 0, 0, 0.091);
+    background-color: var(--primary-color);
+    /* box-shadow: 2px 2px rgba(0, 0, 0, 0.091); */
+    border: 1px solid rgba(0, 0, 0, 0.064);
 }
 
 .imgTuile {

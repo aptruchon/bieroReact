@@ -1,6 +1,6 @@
 /* Y mettre mes variables */
 /* exemple */
 :root {
-    --color-primary: #f6e6cf;
-    --color-secondary: #edf3f0;
+    --color-primary: white;
+    --color-secondary: rgb(191, 178, 178);
 }

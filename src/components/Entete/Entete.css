@@ -1,43 +1,30 @@
-header {
-    text-align: center;
-    padding-bottom: 10px;
-}
-
-nav {
+.navigation {
+    padding: 10px 0px;
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
     display: flex;
     justify-content: space-between;
-    margin-left: 20px;
-    margin-right: 20px;
+    align-items: flex-end;
+    margin: 0px 20px;
 }
 
-.lienListe {
-    font-family: 'Raleway', sans-serif;
-    font-size: 25px;
-}
-
-input {
-    border: 0.5px solid rgba(232, 169, 80, 0.298);
+.navigation__formulaire-input {
+    border: 1px solid rgba(0, 0, 0, 0.14);
     padding: 5px;
-    box-shadow: 2px 2px rgba(0, 0, 0, 0.091);
-    font-family: 'Raleway', sans-serif;
+    margin-bottom: 10px;
 }
 
-button {
-	background-color: rgb(227, 230, 203);
-	color: inherit;
+.navigation__formulaire-bouton {
 	border: none;
     border-radius: 3px;
-	padding: 0;
+	padding: 5px;
+    margin-left: 10px;
 	font: inherit;
 	cursor: pointer;
-	outline: inherit;
-    margin-left: 10px;
-    padding: 5px;
-    box-shadow: 2px 2px rgba(0, 0, 0, 0.091);
-    font-family: 'Raleway', sans-serif;
+    /* box-shadow: 2px 2px rgba(0, 0, 0, 0.091); */
 }
 
-button:hover {
+.navigation__formulaire-bouton:hover {
     background-color: rgb(231, 221, 160);
-    transition: 0.3s;
+    transition: 0.1s;
 }
