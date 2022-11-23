@@ -38,7 +38,7 @@ export default class ListeBiere extends React.Component{
 
         return (
            <>
-                <h2 className='titreListe'>Nos bières</h2>
+                <h2 className='enteteGrille'>Prenez votre temps... || ♪ Jazz ♩ music ♩ playing ♬ || ♪ Let's hope ♩ you ♩ like ♩ jazz ♬ ||</h2>
                 <div className='grille'>
                     {bieres}
                 </div>

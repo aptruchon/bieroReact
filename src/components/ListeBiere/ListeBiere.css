@@ -5,12 +5,12 @@
     margin-left: auto;
     margin-right: auto;
     justify-content: space-between;
-    padding-left: 2vw;
-    padding-right: 2vw;
+    /* padding-left: 2vw;
+    padding-right: 2vw; */
 }
 
-.titreListe {
-    margin-left: 20px;
-    font-family: 'Raleway', sans-serif;
+.enteteGrille {
+    margin-left: 24px;
+    font-family: 'Poiret One', cursive;
     font-weight: 200;
 }

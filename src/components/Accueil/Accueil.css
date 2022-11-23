@@ -13,7 +13,21 @@
 }
 
 .articleAccueil__lien-listeBiere {
-    font-size: 25px;
+    background-color: var(--color-secondary);
+    border: none;
+    border-radius: 5px;
+    margin-top: 40px;
+	padding: 5px;
+    width: 400px;
+    font-size: 35px;
+	font-family: inherit;
+	cursor: pointer;
+}
+
+.articleAccueil__lien-listeBiere:hover {
+    background-color: rgb(231, 221, 160);
+    border-radius: 3px;
+    transition: 0.1s;
 }
 
 .articleAccueil__texte {

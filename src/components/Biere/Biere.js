@@ -16,12 +16,10 @@ export default class Biere extends React.Component{
     render() {
         return (
             <article className='tuile'>
-                <div>
-                    <img className='imgTuile' src={this.state.img} alt="" />
-                </div>
-                <div className='tuile-info'>
-                    <h2 className='nomBiere'>{this.state.nom}</h2>
-                    <span>{this.state.brasserie}</span>
+                <img className='tuile__img' src={this.state.img} alt="" />
+                <div className='tuile__infos'>
+                    <h2 className='tuile__infos-titre'>{this.state.nom}</h2>
+                    <span className='tuile__infos-brasserie'>{this.state.brasserie}</span>
                 </div>
             </article>
         );
