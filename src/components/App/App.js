@@ -5,7 +5,6 @@ import Accueil from '../Accueil/Accueil';
 import ListeBiere from '../ListeBiere/ListeBiere';
 import DetailBiere from '../DetailBiere/DetailBiere';
 import './App.css';
-import Biere from '../Biere/Biere';
 
 export default class App extends React.Component{
   constructor(props){
@@ -34,7 +33,6 @@ export default class App extends React.Component{
           <Route path='/liste' element={<ListeBiere/>} />
           <Route path='/Biere/:id' element={<DetailBiere courriel={this.state.courriel} />} />
           <Route path='*' element={<Accueil/>} />
-
         </Routes>
 			</Router>
 		);

@@ -28,3 +28,11 @@
     width: 35vw;
 }
 
+.biere__titreCommentaires {
+    font-size: 20px;
+    margin: 0;
+}
+
+.biere__titreNote {
+    font-size: 20px;
+}
