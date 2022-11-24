@@ -79,7 +79,7 @@ export default function DetailBiere(props) {
                                     <button onClick={soummetreCommentaire}>Soumettre</button>
                                 </div>;
 
-        blockAjoutNote = <div className='biere__blocNote'></div>;
+        blockAjoutNote = <div className='biere__blocNote'>Votre note :<NotesEtoiles /></div>;
     }
 
     function setCommentaire(e) {
@@ -124,12 +124,12 @@ export default function DetailBiere(props) {
                 <p className='biere__description'>{biere?.description}</p>
                 <div className='biere__metaData'>
                     {noteDom}
-                    <NotesEtoiles />
+                    {blockAjoutNote}
+                    
                     {enteteCommentairesDom}
                     {commentairesDom}
 
                     {blockAjoutCommentaire}
-                    {blockAjoutNote}
                 </div>
             </div>
             <div>
