@@ -1,38 +1,116 @@
-.biere {
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    margin: 40px auto 0px auto;
-    font-family: 'Poiret One', cursive;
+@media screen and (min-width: 360px) {
+    .biere {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        width: 90%;
+        margin: 40px auto 40px auto;
+        font-family: 'Poiret One', cursive;
+        
+    }
+    
+    .biere__infos {
+        /* text-align: center; */
+        width: 90vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .biere__nom {
+        font-size: 35px;
+        font-weight: bolder;
+    }
+    
+    .biere__brasserie {
+        font-size: 25px;
+        font-weight: bolder;
+    }
+    
+    .biere__description {
+        font-size: 23px;
+    }
+
+    .biere__img-conteneur {
+        text-align: center;
+        
+    }
+    
+    .biere__img {
+        width: 90vw;
+    }
+    
+    .biere__titreCommentaires {
+        font-size: 25px;
+        margin: 23px 0 0 0;
+    }
+    
+    .biere__titreNote {
+        font-size: 25px;
+        margin: 0;
+    }
+    
+    .biere__note {
+        font-size: 30px;
+    }
+
+    .biere__boutonCommentaire {
+        border: none;
+        border-radius: 3px;
+        padding: 5px;
+        font: inherit;
+        cursor: pointer;
+    }
+
+    .biere__boutonCommentaire:hover {
+        background-color: rgb(231, 221, 160);
+        transition: 0.1s;
+    }
 }
 
-.biere__infos {
-    width: 49vw;
+@media screen and (min-width: 769px) {
+    .biere {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .biere__infos {
+        /* text-align: center; */
+        margin-left: 0px;
+        margin-right: 40px;
+    }
+
+    .biere__img {
+        width: 50vw;
+    }
 }
 
-.biere__nom {
-    font-size: 30px;
-    font-weight: bolder;
+@media screen and (min-width: 769px) {
+    .biere {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .biere__infos {
+        /* text-align: center; */
+        margin-left: 0px;
+        margin-right: 40px;
+    }
+
+    .biere__img {
+        width: 50vw;
+    }
 }
 
-.biere__brasserie {
-    font-size: 25px;
-    font-weight: bolder;
+@media screen and (min-width: 1024px) {
+    .biere__infos {
+        /* text-align: center; */
+
+        width: 45vw;
+    }
+
+    .biere__img {
+        width: 45vw;
+    }
 }
 
-.biere__description {
-    font-size: 23px;
-}
 
-.biere__img {
-    width: 35vw;
-}
-
-.biere__titreCommentaires {
-    font-size: 20px;
-    margin: 0;
-}
-
-.biere__titreNote {
-    font-size: 20px;
-}

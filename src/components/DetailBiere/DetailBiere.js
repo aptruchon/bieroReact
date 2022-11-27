@@ -57,7 +57,7 @@ export default function DetailBiere(props) {
     // Création du dom de la note de la biere
     const noteDom = <>
                         <h4 className='biere__titreNote'>Note moyenne</h4>
-                        <p>{parseFloat(note.note).toFixed(2)} <small>({note.nombre})</small></p>
+                        <p className='biere__note'>{parseFloat(note.note).toFixed(2)}/5 <small>({note.nombre})</small></p>
                     </>
     
     // Création du dom des commentaires en fonction du nombre de commentaires
@@ -73,11 +73,11 @@ export default function DetailBiere(props) {
         // console.log("usager est logged in");
         blockAjoutCommentaire = <div className='biere__blocAjoutCommentaire'>
                                     <textarea onBlur={getNouveauCommentaire} cols="30" rows="10" placeholder='Ajouter un commentaire'></textarea>
-                                    <br/>
-                                    <button onClick={soummettreCommentaire}>Soumettre</button>
+                                    <br/><br/>
+                                    <button className='biere__boutonCommentaire' onClick={soummettreCommentaire}>Soumettre</button>
                                 </div>;
 
-        blockAjoutNote = <div onMouseDown={getNouvelleNote} onMouseUp={soummettreNote} className='biere__blocNote'>Votre note :<NotesEtoiles /></div>;
+        blockAjoutNote = <div onMouseDown={getNouvelleNote} onMouseUp={soummettreNote} className='biere__blocNote'><h4 className='biere__titreNote'>Votre note :</h4><NotesEtoiles /></div>;
     }
 
     /* Aller chercher le nouveau commentaire entré */
@@ -167,7 +167,7 @@ export default function DetailBiere(props) {
                     {blockAjoutCommentaire}
                 </div>
             </div>
-            <div>
+            <div className='biere__img-conteneur'>
                 <img className='biere__img' src={biere?.image} alt="{biere?.image}" />
             </div>
             

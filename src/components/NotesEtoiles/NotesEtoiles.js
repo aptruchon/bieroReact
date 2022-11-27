@@ -14,7 +14,7 @@ const NotesEtoiles = () => {
           <button
             type="button"
             key={index}
-            className={index <= (hover || rating) ? "on" : "off"}
+            className={`${index <= (hover || rating) ? "on" : "off"} etoiles`}
             onClick={() => setRating(index)}
             onMouseEnter={() => setHover(index)}
             onMouseLeave={() => setHover(rating)}
