@@ -9,6 +9,7 @@ const NotesEtoiles = () => {
     <div className="star-rating">
       {[...Array(5)].map((star, index) => {
         index += 1;
+        
         return (
           <button
             type="button"
@@ -18,7 +19,7 @@ const NotesEtoiles = () => {
             onMouseEnter={() => setHover(index)}
             onMouseLeave={() => setHover(rating)}
           >
-            <span className="star">&#9733;</span>
+            <span data-js-value={index} className="star">&#9733;</span>
           </button>
         );
       })}
