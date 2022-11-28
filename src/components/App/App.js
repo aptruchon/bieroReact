@@ -15,8 +15,19 @@ export default class App extends React.Component{
     }
   }
 
+  /**
+   * Fonction qui attribue la valeur de localStorage.courriel à this.state.courriel si localStorage.courriel est true
+   */
+  componentDidMount() {
+    if (localStorage.getItem("courriel")) this.setState({ courriel: localStorage.getItem("courriel") });
+  }
+
+  /**
+   * Fonction wui attribue le paramêtre courriel reçue à this.state.courriel
+   * 
+   * @param {string} courriel 
+   */
   login = (courriel) =>{
-    console.log(courriel);
     this.setState({ courriel: courriel });
   }
 
@@ -48,5 +59,4 @@ export default class App extends React.Component{
   To do list
   responsivité de la liste des bieres
   Regex pour les courriels
-  Affichage de la bonne note après connexion d'un utilisateur qui en a déjà laissé une
 */

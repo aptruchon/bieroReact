@@ -14,6 +14,13 @@
     margin-bottom: 10px;
 }
 
+.navigation__formulaire-courrielUtilisateur {
+    display: inline-block;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
 .navigation__formulaire-bouton {
 	border: none;
     border-radius: 3px;

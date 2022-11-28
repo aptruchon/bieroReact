@@ -7,6 +7,7 @@ import NotesEtoiles from "../NotesEtoiles/NotesEtoiles";
 export default function DetailBiere(props) {
     // Mettre les paramètres de l'url dans une variable
     const params = useParams();
+    // Urls pour les requêtes
     const urlBiere = `http://127.0.0.1:8000/webservice/php/biere/${params.id}`,
           urlBiereCommentaire = `${urlBiere}/commentaire`,
           urlBiereNote = `${urlBiere}/note`;
@@ -16,10 +17,13 @@ export default function DetailBiere(props) {
     const [commentaires, setCommentaires] = useState([]);
     const [note, setNote] = useState({});
     const [nouvelleNote, setNouvelleNote] = useState("");
-    const [nouveauCommentaire, setNouveauCommentaires] = useState("");
+    const [nouveauCommentaire, setNouveauCommentaire] = useState("");
     // Attribution d'une image par défaut pour les bières
     biere.image = biere.image || imageBiere;
 
+    /**
+     * Récupération des données d'une bière dans la BD et les assigners à la variable biere
+     */
     useEffect(() => {
         fetch(urlBiere)
             .then((response) => { return response.json() })
@@ -28,6 +32,9 @@ export default function DetailBiere(props) {
             })
     }, []);
 
+    /**
+     * Récupération des commentaires d'une bière dans la BD et les assigners à la variable commentaires
+     */
     useEffect(() => {
         fetch(urlBiereCommentaire)
             .then((response) => { return response.json() })
@@ -36,6 +43,9 @@ export default function DetailBiere(props) {
             })
     }, []);
 
+    /**
+     * Récupération de le note moyenne d'une bière dans la BD et l'assigner à la variable note
+     */
     useEffect(() => {
         fetch(urlBiereNote)
             .then((response) => { return response.json() })
@@ -43,7 +53,9 @@ export default function DetailBiere(props) {
                 setNote(data.data);
             })
     }, []);
-    
+
+
+
     // Gestion du titre de la section des commentaires
     let enteteCommentairesDom = "";
     if(commentaires == 0){
@@ -52,7 +64,6 @@ export default function DetailBiere(props) {
     else {
         enteteCommentairesDom = <h4 className='biere__titreCommentaires'>Commentaire{(commentaires.length > 1 ? "s" : "")}</h4>;
     }
-
     
     // Création du dom de la note de la biere
     const noteDom = <>
@@ -70,37 +81,41 @@ export default function DetailBiere(props) {
     let blockAjoutNote = "";
 
     if(props.courriel){
-        // console.log("usager est logged in");
+        blockAjoutNote = <div onMouseDown={getNouvelleNote} onMouseUp={soummettreNote} className='biere__blocNote'><h4 className='biere__titreNote'>Votre note :</h4><NotesEtoiles /></div>;
+
         blockAjoutCommentaire = <div className='biere__blocAjoutCommentaire'>
                                     <textarea className='biere__zoneTexteCommentaire' onBlur={getNouveauCommentaire} cols="30" rows="10" placeholder='Ajouter un commentaire'></textarea>
                                     <br/><br/>
                                     <button className='biere__boutonCommentaire' onClick={soummettreCommentaire}>Soumettre</button>
                                 </div>;
-
-        blockAjoutNote = <div onMouseDown={getNouvelleNote} onMouseUp={soummettreNote} className='biere__blocNote'><h4 className='biere__titreNote'>Votre note :</h4><NotesEtoiles /></div>;
     }
 
-    /* Aller chercher le nouveau commentaire entré */
+    /**
+     * Aller chercher le nouveau commentaire entré et l'assigner à la variable nouveauCommentaire grâce à la fonction setNouveauCommentaire
+     */
     function getNouveauCommentaire(e) {
-        setNouveauCommentaires(e.target.value);
-        console.log(nouveauCommentaire);
+        setNouveauCommentaire(e.target.value);
         
         // Vider le textarea
         e.target.value = "";
     }
     
-    /* Aller chercher le nouvelle note entrée */
+    /*
+     * Aller chercher le nouvelle note entrée et l'assigner à la variable nouvelleNote grâce à la fonction setNouvelleNote
+     */
     function getNouvelleNote(e) {
-        console.log(`Note entrée : ${e.target.dataset.jsValue}`);
         setNouvelleNote(e.target.dataset.jsValue);
     }
 
+    /**
+     * Fonction qui envoie une requête PUT et une requête GET pour mettre à jour les commentaires et rafraichir l'affichage instantanément
+     */
     async function soummettreCommentaire() {
+
         let oCommentaire = {
             commentaire: nouveauCommentaire,
             courriel: props.courriel
         }
-        console.log(oCommentaire);
 
         let options = {
             method: 'PUT',
@@ -123,6 +138,9 @@ export default function DetailBiere(props) {
             })
     }
 
+    /**
+     * Fonction qui envoie une requête PUT et une requête GET pour mettre à jour la note et rafraichir l'affichage instantanément
+     */
     async function soummettreNote() {
         let oNote = {
             note: nouvelleNote,
