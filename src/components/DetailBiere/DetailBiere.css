@@ -61,10 +61,15 @@
         cursor: pointer;
     }
 
+    .biere__zoneTexteCommentaire {
+        margin-top: 10px;
+    }
+    
     .biere__boutonCommentaire:hover {
         background-color: rgb(231, 221, 160);
         transition: 0.1s;
     }
+
 }
 
 @media screen and (min-width: 769px) {
@@ -103,8 +108,6 @@
 
 @media screen and (min-width: 1024px) {
     .biere__infos {
-        /* text-align: center; */
-
         width: 45vw;
     }
 

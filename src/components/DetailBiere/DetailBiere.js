@@ -47,7 +47,7 @@ export default function DetailBiere(props) {
     // Gestion du titre de la section des commentaires
     let enteteCommentairesDom = "";
     if(commentaires == 0){
-        enteteCommentairesDom = "Aucun commentaires";
+        enteteCommentairesDom = <h4 className='biere__titreCommentaires'>Aucun commentaire</h4>;
     }
     else {
         enteteCommentairesDom = <h4 className='biere__titreCommentaires'>Commentaire{(commentaires.length > 1 ? "s" : "")}</h4>;
@@ -72,7 +72,7 @@ export default function DetailBiere(props) {
     if(props.courriel){
         // console.log("usager est logged in");
         blockAjoutCommentaire = <div className='biere__blocAjoutCommentaire'>
-                                    <textarea onBlur={getNouveauCommentaire} cols="30" rows="10" placeholder='Ajouter un commentaire'></textarea>
+                                    <textarea className='biere__zoneTexteCommentaire' onBlur={getNouveauCommentaire} cols="30" rows="10" placeholder='Ajouter un commentaire'></textarea>
                                     <br/><br/>
                                     <button className='biere__boutonCommentaire' onClick={soummettreCommentaire}>Soumettre</button>
                                 </div>;
@@ -170,7 +170,6 @@ export default function DetailBiere(props) {
             <div className='biere__img-conteneur'>
                 <img className='biere__img' src={biere?.image} alt="{biere?.image}" />
             </div>
-            
         </article>
     )
 }

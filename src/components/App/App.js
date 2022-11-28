@@ -18,7 +18,6 @@ export default class App extends React.Component{
   login = (courriel) =>{
     console.log(courriel);
     this.setState({ courriel: courriel });
-    
   }
 
   render() {
@@ -46,4 +45,8 @@ export default class App extends React.Component{
   + mise en page ajout commentaire OK
   + Nouveau bloc ajout Note + sa mise en page OK
 
+  To do list
+  responsivité de la liste des bieres
+  Regex pour les courriels
+  Affichage de la bonne note après connexion d'un utilisateur qui en a déjà laissé une
 */
