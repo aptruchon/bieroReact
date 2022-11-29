@@ -16,10 +16,10 @@ export default class App extends React.Component{
   }
 
   /**
-   * Fonction qui attribue la valeur de localStorage.courriel à this.state.courriel si localStorage.courriel est true
+   * Fonction qui attribue la valeur de sessionStorage.courriel à this.state.courriel si sessionStorage.courriel est true
    */
   componentDidMount() {
-    if (localStorage.getItem("courriel")) this.setState({ courriel: localStorage.getItem("courriel") });
+    if (sessionStorage.getItem("courriel")) this.setState({ courriel: sessionStorage.getItem("courriel") });
   }
 
   /**
