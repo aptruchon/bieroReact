@@ -89,7 +89,7 @@ export default class Entete extends React.Component{
 
   render() {
     let blocConnexion = <>
-                        <input className='navigation__formulaire-input' onBlur={this.changeCourriel} type="text" defaultValue="un@courriel.ca" placeholder="un@courriel.ca" />
+                        <input className='navigation__formulaire-input' onBlur={this.changeCourriel} type="text" placeholder="un@courriel.ca" />
                         <button className='navigation__formulaire-bouton' onClick={this.login}>Connexion</button>
                         </>
 

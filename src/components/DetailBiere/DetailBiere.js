@@ -73,7 +73,7 @@ export default function DetailBiere(props) {
     
     // Création du dom des commentaires en fonction du nombre de commentaires
     const commentairesDom = commentaires.map((commentaire, index) => {
-    return <p className='biere__commentaire' key={index}>{commentaire.commentaire} - <small>{commentaire.courriel}</small></p>
+    return <p className='biere__commentaire' key={index}>{commentaire.commentaire} - <small className='biere__commentaire-courriel'>{commentaire.courriel}</small></p>
     })
 
     //Création du dom pour l'ajout de commentaires et de note

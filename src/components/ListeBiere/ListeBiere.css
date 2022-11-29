@@ -1,17 +1,32 @@
-.grille {
-    display: grid;
-    grid-template-columns: 20vw 20vw 20vw 20vw;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 40px;
-    justify-content: space-between;
-    /* padding-left: 2vw;
-    padding-right: 2vw; */
+@media screen and (min-width: 360px) {
+    .grille {
+        display: grid;
+        grid-template-columns: 80vw;
+        gap: 20px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+    
+    .enteteGrille {
+        margin-left: 24px;
+        font-family: 'Poiret One', cursive;
+        font-weight: 200;
+    }
 }
 
-.enteteGrille {
-    margin-left: 24px;
-    font-family: 'Poiret One', cursive;
-    font-weight: 200;
+@media screen and (min-width: 769px) {
+    .grille {
+        grid-template-columns: 40vw 40vw;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .grille {
+        grid-template-columns: 20vw 20vw 20vw 20vw;
+        gap: 0;
+        width: 90%;
+    }
 }

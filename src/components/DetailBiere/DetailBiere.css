@@ -43,6 +43,14 @@
         font-size: 25px;
         margin: 23px 0 0 0;
     }
+
+    .biere__commentaire{
+        font-size: 20px;
+    }
+
+    .biere__commentaire-courriel{
+        font-size: 16px;
+    }
     
     .biere__titreNote {
         font-size: 25px;

@@ -55,8 +55,4 @@ export default class App extends React.Component{
   + gestion dynamique de la note actuelle OK
   + mise en page ajout commentaire OK
   + Nouveau bloc ajout Note + sa mise en page OK
-
-  To do list
-  responsivité de la liste des bieres
-  Regex pour les courriels
 */
