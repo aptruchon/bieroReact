@@ -1,4 +1,17 @@
 # Tp-4 Biero-React
+**Accueil**
+![](./imgREADME/accueilDesktop.png)
 
-(À l'attention de mon professeur)
-https://e2195598.webdev.cmaisonneuve.qc.ca/biero/
+---
+**Catalogue**
+![](./imgREADME/catalogueDesktop.png)
+
+---
+
+**Détails**
+![](./imgREADME/detailDesktop.png)
+
+---
+
+**Détails mobile**
+![](./imgREADME/detailMobile.png)
